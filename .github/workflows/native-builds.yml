@@ -55,12 +55,13 @@ jobs:
             platform: arm64
             libc: musl
             runtime: alpine:3.22
+          # see jni/build-windows.sh
           - classifier: windows-x86_64
             family: windows
             runner: windows-2022
-            msystem: MINGW64
-            package-prefix: mingw-w64-x86_64
-            compiler: gcc
+            msystem: CLANG64
+            package-prefix: mingw-w64-clang-x86_64
+            compiler: clang
             task: compileNativeForWindowsX8664
             directory: windows-x86_64
             library: libdatachannel-java.dll

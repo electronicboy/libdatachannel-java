@@ -46,7 +46,7 @@ Build one Linux native with, for example:
 The CI matrix builds all eight Linux, Windows, and macOS targets concurrently
 on matching x86_64 or ARM64 runners. Only musl uses a container (Alpine 3.22);
 glibc builds use GCC 12 and OpenSSL from Ubuntu 22.04, Windows builds use native
-MSYS2 MINGW64/CLANGARM64 with static OpenSSL, and macOS builds use the host
+MSYS2 CLANG64/CLANGARM64 with static OpenSSL, and macOS builds use the host
 toolchain. Install the corresponding build dependencies for local builds.
 
 Every job checks lazy and eager loading of the packaged bundle in a matching
